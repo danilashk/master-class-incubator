@@ -1,0 +1,149 @@
+table {
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 3.33fr)
+    minmax(150px, 1.67fr);
+  margin-bottom: 24px;
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+th,
+td {
+  padding: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: rgba(108, 122, 224, 0.78);
+  text-align: left;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: white;
+}
+
+th:last-child {
+  border: 0;
+}
+
+td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+  font-weight: 300;
+}
+
+tr:nth-child(even) td {
+  background: rgb(20, 22, 17);
+}
+
+
+
+.table {
+  display: grid;
+  background: rgba(108, 122, 224, 0.78);
+  grid-template-columns:
+          minmax(150px, 1fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 3.33fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 3.33fr)
+          minmax(150px, 1.67fr);
+}
+.heading {
+  padding: 15px;
+}
+.rowGroup {
+  display: grid;
+  grid-template-columns:
+          minmax(150px, 1fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 3.33fr)
+          minmax(150px, 1.67fr)
+          minmax(150px, 3.33fr)
+          minmax(150px, 1.67fr);
+}
+
+.row {
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  color: #808080;
+  font-weight: 300;
+  &:nth-child(4) {
+    overflow: hidden;
+  }
+  &:nth-child(5) {
+    white-space: nowrap;
+  }
+  &:nth-child(6) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &:nth-child(8) {
+    word-break: break-word;
+  }
+}
+
+
+.btn {
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-right: 12px;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+.btn2 {
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+.btn3 {
+  text-align: center;
+  width: 100%;
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}

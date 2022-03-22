@@ -1,0 +1,74 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main {
+  padding: 12px;
+  flex: 1 1 auto;
+}
+.pageTitle {
+  text-align: center;
+}
+
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+.post {
+  border: 1px solid rgba(255, 255, 255, .3);
+  padding: 6px;
+}
+
+
+.sel1 a {
+  color: rgb(108, 212, 173);
+}
+
+.sel2 + span {
+  color: rgb(108, 212, 173);
+}
+
+.sel3 > ul {
+  background: rgb(108, 212, 173, .5);
+}
+
+.sel4 ~ span {
+  color: rgb(108, 212, 173);
+}
+
+.sel5 a[href*="google"] {
+  color: rgb(108, 212, 173);
+}
+
+.sel6 a[href$=".ru"] {
+  color: rgb(108, 212, 173);
+}
+
+.sel7 li:not(li:nth-child(2)) {
+  background: rgb(108, 212, 173, .5);
+}
+
+.sel8 {
+  border: 1px solid rgba(108, 212, 173, .3);
+  margin-bottom: 6px;
+}
+.sel8 li:only-child {
+  color: rgb(108, 212, 173);
+}
+
+.sel9:nth-child(even) {
+  background: rgb(108, 212, 173, .5);
+}
+
+.sel9:not(.sel9:nth-child(even)) {
+  background: rgba(203, 201, 27, 0.5);
+}
+
+
+
