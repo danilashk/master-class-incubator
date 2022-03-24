@@ -1,11 +1,11 @@
-import * as React from 'react';
 import styles from './Selectors.module.scss'
 import Header from "../../../Header/Header";
-import {Accordion, AccordionDetails, AccordionSummary, Button, Typography} from "@mui/material";
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import * as React from 'react';
+import CustomizedAccordions from "../../../MUI/Accordeon/Accordeon";
 
 
-const Selectors = () => {
+const Selectors = (props) => {
+
     return (
         // <div className={styles.container}>
         //     <Header/>
@@ -119,21 +119,25 @@ const Selectors = () => {
         //         </section>
         //     </main>
         // </div>
-        <Accordion>
-            <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-            >
-                <Typography>Accordion 1</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-                <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                    malesuada lacus ex, sit amet blandit leo lobortis eget.
-                </Typography>
-            </AccordionDetails>
-        </Accordion>
+        // <div className={styles.container}>
+        //     <Header/>
+        //     <main className={styles.main}>
+        //         <section>
+        //             <h1 className={styles.pageTitle}>Селекторы</h1>
+        //             <div className={styles.posts}>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
+        //             </div>
+        //         </section>
+        //     </main>
+        // </div>
+        <div>
+
+        </div>
     )
 };
 
