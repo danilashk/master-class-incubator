@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './FlexOrGrid.module.scss'
 import Header from "../../../Header/Header";
+import {useLocation} from "react-router-dom";
+import Notification from "../../../notification/Notification";
 
 const FlexOrGrid = () => {
+    const location = useLocation()
     return (
         <>
             <Header/>
@@ -75,7 +78,7 @@ const FlexOrGrid = () => {
                 <div>Two</div>
                 <div>Three</div>
             </div>
-
+            {/*<Notification url={location.pathname}/>*/}
 
 
         </>

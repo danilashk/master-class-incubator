@@ -2,10 +2,26 @@ import styles from './Selectors.module.scss'
 import Header from "../../../Header/Header";
 import * as React from 'react';
 import CustomizedAccordions from "../../../MUI/Accordeon/Accordeon";
+import DataSelectors from "../../../../data/dataSelectors";
+import {useLocation} from "react-router-dom";
+import Notification from "../../../notification/Notification";
 
 
 const Selectors = (props) => {
-
+    const location = useLocation()
+    const posts = DataSelectors.data.map((i) => {
+        return (
+            <CustomizedAccordions
+                title={i.title.textOfTitle}
+                result={i.result.code}
+                jsxLanguage={i.templatesCode.html.lang}
+                jsxCode={i.templatesCode.html.code}
+                cssLanguage={i.templatesCode.css.lang}
+                cssCode={i.templatesCode.css.code}
+                description={i.description.text}
+            />
+        )
+    })
     return (
         // <div className={styles.container}>
         //     <Header/>
@@ -119,25 +135,21 @@ const Selectors = (props) => {
         //         </section>
         //     </main>
         // </div>
-        // <div className={styles.container}>
-        //     <Header/>
-        //     <main className={styles.main}>
-        //         <section>
-        //             <h1 className={styles.pageTitle}>Селекторы</h1>
-        //             <div className={styles.posts}>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //                 <CustomizedAccordions title={'Селектор вложенности'} html={'Strimg'} css={'12312312'}/>
-        //             </div>
-        //         </section>
-        //     </main>
-        // </div>
-        <div>
+        <>
+            <div className={styles.container}>
+                <Header/>
+                <main className={styles.main}>
+                    <section>
+                        <h1 className={styles.pageTitle}>Селекторы</h1>
+                        <div className={styles.posts}>
+                            {posts}
+                        </div>
+                    </section>
+                </main>
+            </div>
+            <Notification url={location.pathname}/>
+        </>
 
-        </div>
     )
 };
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import {styled} from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
@@ -7,10 +7,11 @@ import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import styles from './Accordeon.module.scss'
 import FullWidthTabs from "../Tabs/Tabs";
+import ComponentSyntax from "../../codeViewer/codeViewer";
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
+))(({theme}) => ({
     border: `1px solid ${theme.palette.divider}`,
     '&:not(:last-child)': {
         borderBottom: 0,
@@ -22,10 +23,10 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
     <MuiAccordionSummary
-        expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+        expandIcon={<ArrowForwardIosSharpIcon sx={{fontSize: '0.9rem'}}/>}
         {...props}
     />
-))(({ theme }) => ({
+))(({theme}) => ({
     backgroundColor:
         theme.palette.mode === 'dark'
             ? 'rgb(255,255,255)'
@@ -39,7 +40,7 @@ const AccordionSummary = styled((props) => (
     },
 }));
 
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
+const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
     padding: theme.spacing(2),
     borderTop: '1px solid rgba(0, 0, 0, .125)',
     backgroundColor: 'rgba(0,0,0,0.66)',
@@ -62,10 +63,14 @@ export default function CustomizedAccordions(props) {
                     <Typography>{props.title}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <div className={styles.description}>Result</div>
-                    <div className={styles.result}><FullWidthTabs html={props.html} css={props.css}/></div>
+                    <div className={styles.description}>Result: {props.result}</div>
+                    <div className={styles.result}><FullWidthTabs jsxCode={props.jsxCode}
+                                                                  jsxLanguage={props.jsxLanguage}
+                                                                  cssCode={props.cssCode}
+                                                                  cssLanguage={props.cssLanguage}/>
+                    </div>
                     <div className={styles.code}>
-                        Description
+                        {props.description}
                     </div>
                 </AccordionDetails>
             </Accordion>

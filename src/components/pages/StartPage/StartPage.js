@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import PreviewItem from "../../PreviewItem/PreviewItem";
 import styles from "./StartPage.module.scss"
-import {Route} from "react-router-dom";
+import {Route, useLocation} from "react-router-dom";
+import Notification from "../../notification/Notification";
 
 const data = [
     {name: 'HTML', link: "HTML"},
@@ -14,15 +15,28 @@ const data = [
 
 
 const StartPage = (props) => {
+    const location = useLocation()
+
+    // const [remember, setRemember] = useState(true)
+    //
+    // const onRemember = () => {
+    //     localStorage.setItem('rememberMe', remember);
+    //     return remember
+    // }
+
     const items = data.map((value) => {
         return (
                 <PreviewItem text={value.name} link={value.link}/>
         )
     })
+
     return (
+        <>
             <div className={styles.itemsBox}>
                 {items}
             </div>
+            <Notification url={location.pathname}/>
+        </>
     );
 };
 

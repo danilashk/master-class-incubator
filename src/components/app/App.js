@@ -8,6 +8,18 @@ import Tables from "../pages/ItemPage/Tables/Tables";
 import HTML from "../pages/ItemPage/HTML/HTML";
 import Selectors from "../pages/ItemPage/Selectors/Selectors";
 import Portals from "../pages/ItemPage/Portals/Portals";
+import Notification from "../notification/Notification";
+
+const Wrapper = (Component) => {
+    const location = useLocation()
+    const ComponentWithNotification = (props) => {
+        return <>
+            <Component {...props}/>
+            <Notification url={location.pathname}/>
+        </>
+    }
+     return ComponentWithNotification
+}
 
 
 function App() {

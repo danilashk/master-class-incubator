@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import styles from "./Portals.module.scss";
 import Header from "../../../Header/Header";
 import ReactDOM from "react-dom";
+import {useLocation} from "react-router-dom";
+import Notification from "../../../notification/Notification";
 
 const Portals = () => {
     const [status, setStatus] = useState(false)
@@ -10,8 +12,9 @@ const Portals = () => {
     }
 
 
-
+    const location = useLocation()
     return (
+        <>
         <div className={styles.container}>
             <Header/>
             <main className={styles.main}>
@@ -29,12 +32,14 @@ const Portals = () => {
                         <button onClick={submit} className={styles.btn}>Submit</button>
                         {status ? <div role='status' className={styles.error}>Error</div> : null}
                         {status ? <Portal>
-                            <Notification/>
+                            <Note/>
                         </Portal> : null}
                     </form>
                 </section>
             </main>
         </div>
+        <Notification url={location.pathname}/>
+        </>
     );
 };
 
@@ -45,7 +50,7 @@ const Portal = (props) => {
     return ReactDOM.createPortal(props.children, node)
 }
 
-const Notification = () => {
+const Note = () => {
     return (
         <div role='status' className={styles.success}>Success</div>
     )

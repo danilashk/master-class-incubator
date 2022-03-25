@@ -8,6 +8,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {styled} from "@mui/material";
+import ComponentSyntax from "../../codeViewer/codeViewer";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -81,10 +82,10 @@ export default function FullWidthTabs(props) {
                 onChangeIndex={handleChangeIndex}
             >
                 <StyledTabPanel value={value} index={0} dir={theme.direction}>
-                    {props.html}
+                    <ComponentSyntax code={props.jsxCode} language={props.jsxLanguage}/>
                 </StyledTabPanel>
                 <StyledTabPanel value={value} index={1} dir={theme.direction}>
-                    {props.css}
+                    <ComponentSyntax code={props.cssCode} language={props.cssLanguage}/>
                 </StyledTabPanel>
             </SwipeableViews>
         </Box>
