@@ -3,6 +3,7 @@ import PreviewItem from "../../PreviewItem/PreviewItem";
 import styles from "./StartPage.module.scss"
 import {Route, useLocation} from "react-router-dom";
 import Notification from "../../notification/Notification";
+import StartPageNotification from "../../notification/StartPageNotification";
 
 const data = [
     {name: 'HTML', link: "HTML"},
@@ -35,7 +36,8 @@ const StartPage = (props) => {
             <div className={styles.itemsBox}>
                 {items}
             </div>
-            <Notification url={location.pathname}/>
+            <StartPageNotification/>
+            {/*<Notification url={location.pathname}/>*/}
         </>
     );
 };

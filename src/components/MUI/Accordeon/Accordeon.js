@@ -30,7 +30,7 @@ const AccordionSummary = styled((props) => (
     backgroundColor:
         theme.palette.mode === 'dark'
             ? 'rgb(255,255,255)'
-            : 'rgb(0,0,0)',
+            : 'rgb(23, 26, 30)',
     flexDirection: 'row-reverse',
     '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
         transform: 'rotate(90deg)',
@@ -39,14 +39,17 @@ const AccordionSummary = styled((props) => (
         marginLeft: theme.spacing(1),
     },
 }));
-
+const StyledAccordion = styled(Accordion)(({theme}) => ({
+    border: '1px solid #282b2ed6',
+    background: 'rgb(26 29 33)',
+}));
 const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
     padding: theme.spacing(2),
     borderTop: '1px solid rgba(0, 0, 0, .125)',
-    backgroundColor: 'rgba(0,0,0,0.66)',
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '12px'
+    gap: '9px',
+    background: 'rgb(26 29 33)',
 }));
 
 export default function CustomizedAccordions(props) {
@@ -58,22 +61,22 @@ export default function CustomizedAccordions(props) {
 
     return (
         <div>
-            <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            <StyledAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-                    <Typography>{props.title}</Typography>
+                    <Typography>{props.title} {props.selector}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <div className={styles.description}>Result: {props.result}</div>
+                    <div className={styles.code}>
+                        {props.description}
+                    </div>
                     <div className={styles.result}><FullWidthTabs jsxCode={props.jsxCode}
                                                                   jsxLanguage={props.jsxLanguage}
                                                                   cssCode={props.cssCode}
                                                                   cssLanguage={props.cssLanguage}/>
                     </div>
-                    <div className={styles.code}>
-                        {props.description}
-                    </div>
+                    <div className={styles.description}><span className={styles.resultText}>Result:</span> {props.result}</div>
                 </AccordionDetails>
-            </Accordion>
+            </StyledAccordion>
         </div>
     );
 }

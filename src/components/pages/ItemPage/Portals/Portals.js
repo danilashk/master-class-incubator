@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "./Portals.module.scss";
 import Header from "../../../Header/Header";
 import ReactDOM from "react-dom";
 import {useLocation} from "react-router-dom";
 import Notification from "../../../notification/Notification";
+import UseNotificationHook from "../../../../hooks/notification.hook";
 
 const Portals = () => {
+    const {show, setShow, location} = UseNotificationHook()
     const [status, setStatus] = useState(false)
     const submit = () => {
         setStatus(!status)
     }
 
-
-    const location = useLocation()
     return (
         <>
         <div className={styles.container}>
@@ -38,7 +38,7 @@ const Portals = () => {
                 </section>
             </main>
         </div>
-        <Notification url={location.pathname}/>
+            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
         </>
     );
 };

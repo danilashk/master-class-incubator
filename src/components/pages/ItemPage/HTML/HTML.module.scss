@@ -7,8 +7,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.container > header {
-  border: 1px solid rgba(108, 212, 173, .5);
+.wrapper > header {
+  position: relative;
 }
 .main {
   flex: 1 1 auto;
@@ -67,7 +67,16 @@
   align-items: center;
   font-weight: 300;
 }
-
+.click {
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: green;
+}
+.error {
+  background: #443f3a;
+}
 @keyframes rotate{
 
   100%{

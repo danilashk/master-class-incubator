@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './Tables.module.scss'
 import Header from "../../../Header/Header";
 import PopUp from "../../../PopUp/PopUp";
 import Tooltip from "../../../Tooltip/Tooltip";
 import Notification from "../../../notification/Notification";
-import {useLocation} from "react-router-dom";
+import UseNotificationHook from "../../../../hooks/notification.hook";
 
 const Tables = () => {
-    const location = useLocation()
+
+    const {show, setShow, location} = UseNotificationHook()
+
     const [popUp, setPopUp] = useState(false)
     const openPopUp = () => {
         setPopUp(!popUp)
@@ -25,7 +27,7 @@ const Tables = () => {
     return (
         <>
             <div>
-                <Header/>
+                <Header setShow={setShow} />
                 <table>
                     <thead>
                     <tr>
@@ -120,7 +122,7 @@ const Tables = () => {
                     </div>
                 </div>
             </div>
-            {/*<Notification url={location.pathname}/>*/}
+            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
         </>
 
     );

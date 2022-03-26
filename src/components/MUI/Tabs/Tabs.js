@@ -9,9 +9,11 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import {styled} from "@mui/material";
 import ComponentSyntax from "../../codeViewer/codeViewer";
+import MuiAccordion from "@mui/material/Accordion";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
+
 
     return (
         <div
@@ -57,25 +59,37 @@ export default function FullWidthTabs(props) {
 
     const StyledTabPanel = styled(TabPanel)(
         {
-            color: 'rgb(255,0,0)'
+            background: 'rgb(29 31 33)',
+            '& .MuiBox-root': {
+                padding: '3px'
+            },
         },
     );
 
+    const StyledTabs = styled((props) => (
+        <AppBar position="static"
+                {...props}
+        />
+    ))({
+        '&.MuiPaper-root': {
+            backgroundColor: 'rgb(37 40 42)'
+        },
+    });
     return (
-        <Box sx={{ bgcolor: 'rgb(0,0,0)', width: '100%' }}>
-            <AppBar position="static">
+        <Box sx={{ bgcolor: 'rgb(29 31 33)', width: '100%' }}>
+            <StyledTabs position="static">
                 <Tabs
                     value={value}
                     onChange={handleChange}
-                    indicatorColor="secondary"
-                    textColor="inherit"
+                    indicatorColor='primary'
+                    textColor='inherit'
                     variant="fullWidth"
                     aria-label="full width tabs example"
                 >
                     <Tab label="HTML" {...a11yProps(0)} />
                     <Tab label="CSS" {...a11yProps(1)} />
                 </Tabs>
-            </AppBar>
+            </StyledTabs>
             <SwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}

@@ -1,23 +1,30 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './HTML.module.scss'
 import logo from '../../../../assets/logo512.png'
 import {Link, useLocation} from "react-router-dom";
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 import Notification from "../../../notification/Notification";
+import UseNotificationHook from "../../../../hooks/notification.hook";
+import Guide from "../../../Guide/Guide";
 
 const Html = () => {
-    const location = useLocation()
+    const {show, setShow, location} = UseNotificationHook()
+    const [styled, setStyle] = useState(false)
+    const onSetStyle = () => {
+        setStyle(!styled)
+    }
     return (
         <>
             <div className={styles.wrapper}>
-                <Header/>
+                <Header setShow={ setShow }>
+                    <button onClick={onSetStyle} className={styles.click}>123</button>
+                </Header>
                 <main className={styles.main}>
                     <section>
                         <h1 className={styles.pageTitle}>HTML</h1>
                         <article className={styles.article}>
                             <div className={styles.post}>
-                                {/*<p>Введите 2 значения, чтобы посчитать их сумму.</p>*/}
                                 <h3 className={styles.title}>Article Title</h3>
                                 <p className={styles.text}>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -35,12 +42,13 @@ const Html = () => {
                                 <figcaption>Описание логотипа</figcaption>
                                 <span>Published: <time dateTime="2020-12-20T20:00:00">Dec. 20th</time></span>
                             </figure>
+                            <Guide/>
                         </article>
                     </section>
                 </main>
                 <Footer/>
             </div>
-            <Notification url={location.pathname}/>
+            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
         </>
     );
 };

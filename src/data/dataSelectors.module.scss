@@ -1,3 +1,46 @@
 .ul {
   color: red;
 }
+.sel1 a {
+  color: #3598db;
+}
+.sel2 + span {
+  color: #3598db;
+}
+
+.sel3 > ul {
+  background: #3598db;
+}
+
+.sel4 ~ span {
+  color: #3598db;
+}
+
+.sel5 a[href*="google"] {
+  color: #3598db;
+}
+
+.sel6 a[href$=".ru"] {
+  color: #3598db;
+}
+
+.sel7 li:not(li:nth-child(2)) {
+  background: rgba(53, 152, 219, 0.5);
+}
+
+.sel8 {
+  border: 1px solid #3598db;
+  margin-bottom: 6px;
+}
+.sel8 li:only-child {
+  color: #3598db;
+}
+
+.sel9:nth-child(even) {
+  background: rgba(53, 152, 219, 0.5);
+}
+
+.sel9:not(.sel9:nth-child(even)) {
+  background: rgba(53, 152, 219, 0.13);
+}
+
