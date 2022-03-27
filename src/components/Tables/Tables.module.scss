@@ -1,0 +1,218 @@
+// ТАБЛИЦА #1
+.table {
+  //border: 1px solid #ccc;
+  border-collapse: collapse; // Устанавливает, как отображать границы вокруг ячеек таблицы. Это свойство играет роль, когда для ячеек установлена рамка, тогда в месте стыка ячеек получится линия двойной толщины. Значение collapse заставляет браузер анализировать подобные места в таблице и убирать в ней двойные линии.
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+
+  & thead {
+    background-color: #25282a;
+  }
+
+  & tr {
+    border: 1px solid rgba(85, 95, 98, 0.45);
+    padding: .35em;
+  }
+
+  .body tr:nth-child(even) {
+    background-color: #25282a;
+  }
+
+  & th,
+  & td {
+    padding: .625em;
+    text-align: center;
+  }
+
+  & th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+}
+
+.tableWithGrid {
+  display: grid;
+  border-collapse: collapse;
+  min-width: 100%;
+  grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1fr)
+    minmax(150px, 1fr);
+  margin-bottom: 24px;
+
+  thead,
+  tbody,
+  tr {
+    display: contents;
+  }
+
+  th,
+  td {
+    padding: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-collapse: collapse;
+  }
+
+  th {
+    position: sticky;
+    top: 0;
+    background-color: #25282a;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  th:last-child {
+    border: 0;
+  }
+
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 300;
+  }
+
+  tr:nth-child(even) td {
+    background: #25282a;
+  }
+}
+
+.gridTable {
+  .table {
+    display: grid;
+    background-color: #25282a;
+    grid-template-columns:
+          minmax(150px, 1fr)
+          minmax(150px, 1fr)
+          minmax(150px, 1fr);
+  }
+
+  .heading {
+    padding: 9px;
+  }
+
+  .rowGroup {
+    display: grid;
+    grid-template-columns:
+          minmax(150px, 1fr)
+          minmax(150px, 1fr)
+          minmax(150px, 1fr);
+  }
+  .rowGroup:nth-child(odd) {
+    background: #25282a;
+  }
+  .row {
+    padding: 9px;
+  }
+}
+
+// for .table
+@media screen and (max-width: 767px) {
+  .table {
+    border: 0;
+
+    & thead {
+      display: none;
+      visibility: hidden;
+    }
+
+    & tr {
+      border-bottom: 2px solid rgba(85, 95, 98, 0.45);
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    & td {
+      border-bottom: 1px solid rgba(85, 95, 98, 0.45);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8em;
+      text-align: right;
+    }
+
+    & td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    & td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+// for .tableWithGrid
+@media screen and (max-width: 767px) {
+  .tableWithGrid {
+    grid-template-columns: 1fr;
+
+    & td {
+      border-bottom: 1px solid rgba(85, 95, 98, 0.45);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8em;
+      text-align: right;
+    }
+
+    & tr {
+      border-bottom: 2px solid rgba(85, 95, 98, 0.45);
+      display: block;
+      margin-bottom: .625em;
+    }
+
+    thead {
+      display: none;
+      visibility: hidden;
+    }
+
+    & td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//for .gridTable
+@media screen and (max-width: 767px) {
+  .gridTable {
+
+    .table {
+      display: none;
+      visibility: hidden;
+    }
+
+    .rowGroup {
+      grid-template-columns: 1fr;
+      border-bottom: 2px solid rgba(85, 95, 98, 0.45);
+      display: block;
+      margin-bottom: .625em;
+    }
+
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(85, 95, 98, 0.45);
+      font-size: .8em;
+      text-align: right;
+    }
+
+    .row::before {
+      content: attr(data-label);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+

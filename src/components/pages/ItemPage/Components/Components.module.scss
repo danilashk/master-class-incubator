@@ -1,0 +1,61 @@
+.component {
+  margin-bottom: 24px;
+  & > .code {
+    background-color: chocolate;
+  }
+}
+
+
+.btn {
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-right: 12px;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+.btn2 {
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+.btn3 {
+  text-align: center;
+  width: 100%;
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+
+.componentsPage {
+  display: flex;
+}
+.componentsInner {
+  flex: 1 1 auto;
+}
+
+.componentHeight {
+  height: 100px;
+  overflow: auto;
+}

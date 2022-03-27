@@ -89,7 +89,7 @@ const DataSelectors = {
 
         {
             title: {
-                textOfTitle: 'Селектор непосредственных вложенностей',
+                textOfTitle: 'Селектор вложенностей',
                 selectorType: <mark>></mark>
             },
 

@@ -53,6 +53,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({theme}) => ({
 }));
 
 export default function CustomizedAccordions(props) {
+    const [description, setDescription] = React.useState(props.descriptionStatus)
     const [expanded, setExpanded] = React.useState('panel1');
 
     const handleChange = (panel) => (event, newExpanded) => {
@@ -61,7 +62,7 @@ export default function CustomizedAccordions(props) {
 
     return (
         <div>
-            <StyledAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+            {props.description ? <StyledAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
                 <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
                     <Typography>{props.title} {props.selector}</Typography>
                 </AccordionSummary>
@@ -77,6 +78,19 @@ export default function CustomizedAccordions(props) {
                     <div className={styles.description}><span className={styles.resultText}>Result:</span> {props.result}</div>
                 </AccordionDetails>
             </StyledAccordion>
+                : <StyledAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+                <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+                    <Typography>{props.title} {props.selector}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <div className={styles.result}><FullWidthTabs jsxCode={props.jsxCode}
+                                                                  jsxLanguage={props.jsxLanguage}
+                                                                  cssCode={props.cssCode}
+                                                                  cssLanguage={props.cssLanguage}/>
+                    </div>
+                </AccordionDetails>
+            </StyledAccordion>
+            }
         </div>
     );
 }

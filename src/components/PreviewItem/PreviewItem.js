@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import styles from "./PreviewItem.module.scss"
 import FlexOrGrid from "../pages/ItemPage/FlexOrGrid/FlexOrGrid";
-import Tables from "../pages/ItemPage/Tables/Tables";
 
 const PreviewItem = (props) => {
     return (

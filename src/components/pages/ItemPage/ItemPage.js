@@ -1,7 +1,7 @@
 // import React from 'react';
 // import {Route} from "react-router-dom";
 // import FlexOrGrid from "./FlexOrGrid/FlexOrGrid";
-// import Tables from "./Tables/Tables";
+// import Components from "./Components/Components";
 // import HTML from "./HTML/HTML";
 // import Selectors from "./Selectors/Selectors";
 // import Portals from "./Portals/Portals";
@@ -12,8 +12,8 @@
 //             <Route exact path={"/FlexOrGrid"}>
 //                 <FlexOrGrid/>
 //             </Route>
-//             <Route exact path={"/Tables"}>
-//                 <Tables/>
+//             <Route exact path={"/Components"}>
+//                 <Components/>
 //             </Route>
 //             <Route exact path={"/HTML"}>
 //                 <HTML/>

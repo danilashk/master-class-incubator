@@ -2,24 +2,13 @@ import './App.css';
 import StartPage from "../pages/StartPage/StartPage";
 import {BrowserRouter as Router, Route, Switch, Link, useLocation} from "react-router-dom";
 import React from "react";
-import ItemPage from "../pages/ItemPage/ItemPage";
 import FlexOrGrid from "../pages/ItemPage/FlexOrGrid/FlexOrGrid";
-import Tables from "../pages/ItemPage/Tables/Tables";
 import HTML from "../pages/ItemPage/HTML/HTML";
 import Selectors from "../pages/ItemPage/Selectors/Selectors";
 import Portals from "../pages/ItemPage/Portals/Portals";
-import Notification from "../notification/Notification";
+import Components from "../pages/ItemPage/Components/Components";
 
-// const Wrapper = (Component) => {
-//     const location = useLocation()
-//     const ComponentWithNotification = (props) => {
-//         return <>
-//             <Component {...props}/>
-//             <Notification url={location.pathname}/>
-//         </>
-//     }
-//      return ComponentWithNotification
-// }
+
 
 
 function App() {
@@ -36,8 +25,8 @@ function App() {
                                 <Route exact path={"/FlexOrGrid"}>
                                     <FlexOrGrid/>
                                 </Route>
-                                <Route exact path={"/Tables"}>
-                                    <Tables/>
+                                <Route exact path={"/Components"}>
+                                    <Components/>
                                 </Route>
                                 <Route exact path={"/HTML"}>
                                     <HTML/>
