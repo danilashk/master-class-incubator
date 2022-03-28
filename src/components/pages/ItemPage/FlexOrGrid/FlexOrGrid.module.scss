@@ -5,14 +5,16 @@
 .wrapper1 {
   display: flex;
   flex-wrap: wrap;
-  padding: 9px;
-  border: 1px solid #3598db;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     flex: 1 1 200px;
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 12px;
+    background-color: #181a1e;
   }
 }
 
@@ -20,54 +22,65 @@
 .wrapper2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 9px;
-  border: 1px solid #3598db;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 12px;
+    background-color: #181a1e;
   }
 }
 
 .title {
-  margin-bottom: 12px;
-  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-size: 36px;
 }
 
 .subTitle {
   margin-bottom: 6px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 .list {
-  list-style: disc inside;
-  margin: 6px 0;
-  line-height: 24px;
-  font-size: 16px;
-  & > li:first-child {
+  font-weight: 300;
+  list-style-type: auto;
+  list-style-position: inside;
+  padding-left: 18px;
+  margin-bottom: 12px;
+
+  & li {
     margin-bottom: 6px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .text {
-  margin: 6px 0;
-  line-height: 24px;
+  font-weight: 300;
   font-size: 16px;
+  margin: 6px 0 12px 0;
 }
 
 .wrapper3 {
-  padding: 9px;
-  border: 1px solid #3598db;
   display: flex;
   align-items: flex-end;
   min-height: 200px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 12px;
+    background-color: #181a1e;
   }
 }
 
@@ -84,13 +97,15 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: end;
   grid-auto-rows: 200px;
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 12px;
+    background-color: #181a1e;
   }
 
   & > .item1 {
@@ -104,84 +119,98 @@
 
 .wrapper5 {
   display: grid;
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper15 {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper16 {
   display: grid;
   grid-template-columns: repeat(auto-fill, 300px);
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper17 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper18 {
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper19 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
 .wrapper6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 }
 
@@ -191,12 +220,14 @@
   grid-auto-rows: 200px;
   grid-gap: 20px;
   position: relative;
-  border: 1px solid #3598db;
-  padding: 9px;
   margin: 12px 0;
+  background: #25282a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 24px;
 
   & > div {
     border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: #181a1e;
   }
 
   & > .i3 {
@@ -212,11 +243,6 @@
   }
 }
 
-mark {
-  background-color: #25282a;
-  padding: 1px 3px;
-  display: inline-block;
-}
 
 
 

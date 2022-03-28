@@ -7,10 +7,6 @@ const DataTables = {
                 title: 'Посмотреть исходный код таблицы'
             },
 
-            description: {
-              text: `Привет, привет <mark>Hi</mark>`
-            },
-
             templatesCode: {
 
                 html: {
@@ -258,7 +254,6 @@ const DataTables = {
             title: {
                 title: 'Посмотреть исходный код таблицы'
             },
-
             templatesCode: {
 
                 html: {

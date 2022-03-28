@@ -11,7 +11,7 @@ const FlexOrGrid = () => {
     const {show, setShow, location} = UseNotificationHook()
     return (
         <>
-            <Header setShow={setShow}/>
+            <Header setShow={setShow} status={true}/>
             <div style={{padding: '0 12px'}}>
                 <h1 className={styles.title}>Grid и flexbox</h1>
                 <p className={styles.text}> Основное различие между CSS Grid Layout и CSS Flexbox Layout в том, что

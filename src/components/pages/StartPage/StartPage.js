@@ -9,7 +9,7 @@ const data = [
     {name: 'HTML', link: "HTML"},
     {name: 'Selectors', link: "Selectors"},
     {name: 'Flex or Grid', link: "FlexOrGrid"},
-    {name: 'Components', link: "Components/Table1"},
+    {name: 'Components', link: "Components"},
     {name: 'Portals', link: "Portals"},
 
 ]

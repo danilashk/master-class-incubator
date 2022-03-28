@@ -17,7 +17,7 @@ const Html = () => {
     return (
         <>
             <div className={styles.wrapper}>
-                <Header setShow={ setShow }>
+                <Header setShow={ setShow } status={true}>
                     <button onClick={onSetStyle} className={styles.click}>123</button>
                 </Header>
                 <main className={styles.main}>

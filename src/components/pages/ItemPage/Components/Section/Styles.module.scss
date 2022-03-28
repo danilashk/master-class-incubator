@@ -1,0 +1,118 @@
+.component {
+  margin-bottom: 48px;
+}
+
+.componentHeight {
+  height: 100px;
+  overflow: auto;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.pageTitle {
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-size: 36px;
+}
+.title {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.text {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.list {
+  font-weight: 300;
+  list-style-type: auto;
+  list-style-position: inside;
+  padding-left: 18px;
+  margin-bottom: 12px;
+  & li {
+    margin-bottom: 6px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input {
+  margin-top: 9px;
+  margin-bottom: 12px;
+  padding: 6px 9px;
+  border: none;
+  border-bottom: 2px solid #414546;
+  background-color: transparent;
+  display: inline-block;
+  width: 100%;
+}
+
+//for Button Page
+.simpleButton {
+  width: 100%;
+  background-color: transparent;
+  padding: 9px 6px;font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 12px;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}
+.btnBox {
+  max-width: fit-content;
+  overflow: hidden;
+  .btn {
+    min-width: 48px;
+    padding: 9px 6px;
+    min-height: 38px;
+    word-break: break-all;
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    transition: 0.3s ease-in-out;
+    color: rgba(255, 255, 255, .8);
+
+    &:hover {
+      border: 1px solid rgba(255, 255, 255, .8);
+      color: white;
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, .4);
+      color: white;
+    }
+
+    &:active {
+      border: 1px solid rgba(255, 255, 255, .6);
+      background-color: rgba(255, 255, 255, .6);
+      color: white;
+    }
+  }
+}
+
+.btn3 {
+  text-align: center;
+  background-color: transparent;
+  padding: 9px 6px;
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, .8);
+  }
+}

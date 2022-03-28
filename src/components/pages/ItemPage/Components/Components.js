@@ -10,12 +10,12 @@ import SimpleTable from "../../../Tables/SimpleTable";
 import TablesWithGrid from "../../../Tables/TablesWithGrid";
 import GridTable from "../../../Tables/GridTable";
 import CustomizedAccordions from "../../../MUI/Accordeon/Accordeon";
-import DataTables from "../../../../data/dataTables";
-import {Route} from "react-router-dom";
+import DataTables from "../../../../data/dataComponents/dataTables";
+import {Link, Route} from "react-router-dom";
+import Tables from "./Section/Tables";
+import Button from "./Section/Button";
 
 const Components = () => {
-
-    const {show, setShow, location} = UseNotificationHook()
 
     const [popUp, setPopUp] = useState(false)
     const openPopUp = () => {
@@ -33,58 +33,16 @@ const Components = () => {
 
     return (
         <Route>
-            <Header setShow={setShow}/>
+            <Header status={false}/>
             <div className={styles.componentsPage}>
                 <Sidebar/>
                 <div className={styles.componentsInner}>
-                    <Route exact path={'/Components/Table1'} render={() => <div className={styles.component}>
-                        <h2>Обычная таблица</h2>
-                        <p>{DataTables.data[0].description.text}</p>
-                        <SimpleTable/>
-                        <CustomizedAccordions descriptionStatus={false} title={DataTables.data[0].title.title}
-                                              jsxCode={DataTables.data[0].templatesCode.html.code}
-                                              jsxLanguage={DataTables.data[0].templatesCode.html.lang}
-                                              cssCode={DataTables.data[0].templatesCode.css.code}
-                                              cssLanguage={DataTables.data[0].templatesCode.css.lang}/>
-                    </div>}/>
 
-                    <Route exact path={'/Components/Table2'} render={() => <div className={styles.component}>
-                        <h2>Обычная таблица</h2>
-                        <p>{DataTables.data[0].description.text}</p>
-                        <SimpleTable/>
-                        <CustomizedAccordions descriptionStatus={false} title={DataTables.data[1].title.title}
-                                              jsxCode={DataTables.data[1].templatesCode.html.code}
-                                              jsxLanguage={DataTables.data[1].templatesCode.html.lang}
-                                              cssCode={DataTables.data[1].templatesCode.css.code}
-                                              cssLanguage={DataTables.data[1].templatesCode.css.lang}/>
-                    </div>}/>
+                    <Route exact path={'/Components'} render={() => <div>Render</div>}/>
 
-                    {/*<div className={styles.component}>*/}
-                    {/*    <h2>Таблица на гридах</h2>*/}
-                    {/*    <TablesWithGrid/>*/}
-                    {/*    <CustomizedAccordions descriptionStatus={false} title={DataTables.data[1].title.title}*/}
-                    {/*                          jsxCode={DataTables.data[1].templatesCode.html.code}*/}
-                    {/*                          jsxLanguage={DataTables.data[1].templatesCode.html.lang}*/}
-                    {/*                          cssCode={DataTables.data[1].templatesCode.css.code}*/}
-                    {/*                          cssLanguage={DataTables.data[1].templatesCode.css.lang}/>*/}
-                    {/*</div>*/}
+                    <Route exact path={'/Components/Table'} render={() => <Tables/>}/>
 
-                    {/*<div className={styles.component}>*/}
-                    {/*    <h2>Таблица с липким верхом</h2>*/}
-                    {/*    <div className={styles.componentHeight}>*/}
-                    {/*        <TablesWithGrid/>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
-
-                    {/*<div className={styles.component}>*/}
-                    {/*    <h2>Таблица на чистых гридах</h2>*/}
-                    {/*    <GridTable/>*/}
-                    {/*    <CustomizedAccordions descriptionStatus={false} title={DataTables.data[2].title.title}*/}
-                    {/*                          jsxCode={DataTables.data[2].templatesCode.html.code}*/}
-                    {/*                          jsxLanguage={DataTables.data[2].templatesCode.html.lang}*/}
-                    {/*                          cssCode={DataTables.data[2].templatesCode.css.code}*/}
-                    {/*                          cssLanguage={DataTables.data[2].templatesCode.css.lang}/>*/}
-                    {/*</div>*/}
+                    <Route exact path={'/Components/Button'} render={() => <Button/>}/>
                     {/*<div>*/}
                     {/*    <button onClick={openPopUp} className={styles.btn}>Open PopUp</button>*/}
                     {/*    {popUp ? <PopUp onClose={onClose}/> : null}*/}
@@ -93,16 +51,10 @@ const Components = () => {
                     {/*        {tooltip ? <Tooltip*/}
                     {/*            text={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'}/> : null}*/}
                     {/*    </div>*/}
-                    {/*    <div style={{marginTop: 12, width: '150px'}}>*/}
-                    {/*        <button className={styles.btn3}>Open registration</button>*/}
-                    {/*    </div>*/}
-                    {/*    <div style={{marginTop: 12, width: '150px'}}>*/}
-                    {/*        <button className={styles.btn3}>Открыть окно регистрации</button>*/}
-                    {/*    </div>*/}
                     {/*</div>*/}
                 </div>
             </div>
-            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
+            {/*{show ? <Notification url={location.pathname} setShow={setShow}/> : null}*/}
         </Route>
     );
 };

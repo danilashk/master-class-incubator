@@ -16,7 +16,7 @@ const Portals = () => {
     return (
         <>
         <div className={styles.container}>
-            <Header/>
+            <Header status={true}/>
             <main className={styles.main}>
                 <section>
                     <h1 className={styles.pageTitle}>Portals</h1>

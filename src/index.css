@@ -6,6 +6,9 @@
 html, body, #root {
   height: 100%;
 }
+.hidden {
+  overflow: hidden;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background: rgb(23, 26, 30);
@@ -27,5 +30,11 @@ a {
 }
 ul {
   list-style: none;
+}
+
+mark {
+  background-color: #25282a;
+  padding: 1px 3px;
+  display: inline-block;
 }
 

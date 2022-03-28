@@ -5,6 +5,8 @@
 }
 
 .link {
+  position: relative;
+  z-index: 11;
   background: #3598db;
   text-decoration: none;
   padding: 5px 7px;

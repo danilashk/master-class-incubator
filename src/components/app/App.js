@@ -36,8 +36,6 @@ function App() {
                                 <Route exact path={"/Portals"}>
                                     <Portals/>
                                 </Route>
-                        {/*<ItemPage/>*/}
-
 
                         <Route path="*">
                             <div role={'status'} style={{color: 'white'}}>Страница не найдена</div>
