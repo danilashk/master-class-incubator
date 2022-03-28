@@ -1,14 +1,15 @@
 // ТАБЛИЦА #1
 .table {
-  //border: 1px solid #ccc;
   border-collapse: collapse; // Устанавливает, как отображать границы вокруг ячеек таблицы. Это свойство играет роль, когда для ячеек установлена рамка, тогда в месте стыка ячеек получится линия двойной толщины. Значение collapse заставляет браузер анализировать подобные места в таблице и убирать в ней двойные линии.
-  margin: 0;
+  margin: 0 0 24px 0;
   padding: 0;
   width: 100%;
   table-layout: fixed;
 
   & thead {
     background-color: #25282a;
+    font-weight: 400;
+    text-transform: none;
   }
 
   & tr {
@@ -24,12 +25,13 @@
   & td {
     padding: .625em;
     text-align: center;
+    font-weight: 300;
   }
 
   & th {
     font-size: .85em;
     letter-spacing: .1em;
-    text-transform: uppercase;
+    font-weight: 500;
   }
 }
 
@@ -84,7 +86,9 @@
 }
 
 .gridTable {
+  margin-bottom: 24px;
   .table {
+    margin: 0;
     display: grid;
     background-color: #25282a;
     grid-template-columns:

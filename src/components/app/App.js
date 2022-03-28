@@ -25,9 +25,8 @@ function App() {
                                 <Route exact path={"/FlexOrGrid"}>
                                     <FlexOrGrid/>
                                 </Route>
-                                <Route exact path={"/Components"}>
-                                    <Components/>
-                                </Route>
+                                <Route path={"/Components"} render={() => <Components/>}/>
+
                                 <Route exact path={"/HTML"}>
                                     <HTML/>
                                 </Route>
