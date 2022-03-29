@@ -11,6 +11,8 @@ const FlexOrGrid = () => {
     const {show, setShow, location} = UseNotificationHook()
     return (
         <>
+            <div className="transition">
+            <div className={styles.wrapper}>
             <Header setShow={setShow} status={true}/>
             <div style={{padding: '0 12px'}}>
                 <h1 className={styles.title}>Grid и flexbox</h1>
@@ -292,7 +294,8 @@ const FlexOrGrid = () => {
                 </div>
             </div>
             {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
-
+            </div>
+            </div>
         </>
     );
 };

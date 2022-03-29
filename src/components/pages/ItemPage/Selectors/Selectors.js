@@ -27,18 +27,20 @@ const Selectors = (props) => {
     })
     return (
         <>
-            <div className={styles.container}>
-                <Header setShow={ setShow } status={true}/>
-                <main className={styles.main}>
-                    <section>
-                        <h1 className={styles.pageTitle}>Селекторы</h1>
-                        <div className={styles.posts}>
-                            {posts}
-                        </div>
-                    </section>
-                </main>
+            <div className="transition">
+                <div className={styles.container}>
+                    <Header setShow={setShow} status={true}/>
+                    <main className={styles.main}>
+                        <section>
+                            <h1 className={styles.pageTitle}>Селекторы</h1>
+                            <div className={styles.posts}>
+                                {posts}
+                            </div>
+                        </section>
+                    </main>
+                </div>
+                {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
             </div>
-            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
         </>
 
     )

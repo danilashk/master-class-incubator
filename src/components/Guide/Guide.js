@@ -6,6 +6,7 @@ const Guide = (props) => {
     const [show, setShow] = useState(false)
     const onSetShow = () => {
         setShow(!show)
+        props.showElement(!show)
     }
 
     return (

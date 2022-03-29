@@ -32,30 +32,34 @@ const Components = () => {
 
 
     return (
-        <Route>
-            <Header status={false}/>
-            <div className={styles.componentsPage}>
-                <Sidebar/>
-                <div className={styles.componentsInner}>
+        <div className="transition">
+        <div className={styles.wrapper}>
+            <Route>
+                <Header status={false}/>
+                <div className={styles.componentsPage}>
+                    <Sidebar/>
+                    <div className={styles.componentsInner}>
 
-                    <Route exact path={'/Components'} render={() => <div>Render</div>}/>
+                        <Route exact path={'/Components'} render={() => <div>Render Render Render Rende rRender Rende rR en de r R e nd er</div>}/>
 
-                    <Route exact path={'/Components/Table'} render={() => <Tables/>}/>
+                        <Route exact path={'/Components/Table'} render={() => <Tables/>}/>
 
-                    <Route exact path={'/Components/Button'} render={() => <Button/>}/>
-                    {/*<div>*/}
-                    {/*    <button onClick={openPopUp} className={styles.btn}>Open PopUp</button>*/}
-                    {/*    {popUp ? <PopUp onClose={onClose}/> : null}*/}
-                    {/*    <div style={{position: 'relative', display: 'inline-block'}}>*/}
-                    {/*        <button onClick={openTooltip} className={styles.btn2}>Open Tooltip</button>*/}
-                    {/*        {tooltip ? <Tooltip*/}
-                    {/*            text={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'}/> : null}*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
+                        <Route exact path={'/Components/Button'} render={() => <Button/>}/>
+                        {/*<div>*/}
+                        {/*    <button onClick={openPopUp} className={styles.btn}>Open PopUp</button>*/}
+                        {/*    {popUp ? <PopUp onClose={onClose}/> : null}*/}
+                        {/*    <div style={{position: 'relative', display: 'inline-block'}}>*/}
+                        {/*        <button onClick={openTooltip} className={styles.btn2}>Open Tooltip</button>*/}
+                        {/*        {tooltip ? <Tooltip*/}
+                        {/*            text={'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'}/> : null}*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
+                    </div>
                 </div>
-            </div>
-            {/*{show ? <Notification url={location.pathname} setShow={setShow}/> : null}*/}
-        </Route>
+                {/*{show ? <Notification url={location.pathname} setShow={setShow}/> : null}*/}
+            </Route>
+        </div>
+        </div>
     );
 };
 
