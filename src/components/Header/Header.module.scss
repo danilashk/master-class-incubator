@@ -2,9 +2,19 @@
   text-align: end;
   padding: 24px 12px;
   margin-bottom: 12px;
+  transition: 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+.headerOn {
+  text-align: end;
+  padding: 24px 12px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(53, 152, 219, 0.65);
+  transition: 0.3s ease-in-out;
 }
 
 .link {
+  margin-left: 6px;
   position: relative;
   z-index: 11;
   background: #3598db;
@@ -14,6 +24,18 @@
   opacity: 1;
   transition: 0.3s ease;
   font-weight: 500;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.aboutBlockBtn {
+  margin-right: 6px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
   &:hover {
     opacity: .7;
   }

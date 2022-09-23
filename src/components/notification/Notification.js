@@ -26,8 +26,9 @@ const Notification = (props) => {
             {<div className={styles.container}>
             <div className={styles.notification}>
                 <div>
-                    <p>A lot of text content</p>
-                    <button onClick={submit}>Все понятно!</button>
+                    <h1>О чем эта страница?</h1>
+                    <p>{props.description}</p>
+                    <button className={styles.notBtn} onClick={submit}>Все понятно!</button>
                 </div>
             </div>
         </div>}

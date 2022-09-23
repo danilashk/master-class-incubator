@@ -39,7 +39,9 @@ const Selectors = (props) => {
                         </section>
                     </main>
                 </div>
-                {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
+                {show ? <Notification
+                    description={'На данной странице будут разобраны основные селекторы которые используются в работе. Зачем это надо? Зачастую, мы стилизуем некоторые библиотеки/компоненты с помощью секторов, но не всегда понимаем как через дерево достучаться до них'}
+                    url={location.pathname} setShow={setShow}/> : null}
             </div>
         </>
 

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styles from './Guide.module.scss'
-import {element} from "prop-types";
 
 const Guide = (props) => {
     const [show, setShow] = useState(false)
@@ -10,11 +9,13 @@ const Guide = (props) => {
     }
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.guideBox}>
             <div>
-                <button onClick={onSetShow}>Click</button>
-                <div>
-                    {show ? <div>12345</div> : null}
+                <button className={styles.guideBtn} onClick={onSetShow}>{props.btnText}</button>
+                <div className={styles.guide}>
+                    {show ?
+                        <div className={styles.wrapper}><p className={styles.text}>{props.description}</p></div>
+                        : null}
                 </div>
             </div>
         </div>

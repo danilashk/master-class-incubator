@@ -14,6 +14,8 @@ import DataTables from "../../../../data/dataComponents/dataTables";
 import {Link, Route} from "react-router-dom";
 import Tables from "./Section/Tables";
 import Button from "./Section/Button";
+import StartPage from "./Section/StartPage";
+import Portals from "./Section/Portals";
 
 const Components = () => {
 
@@ -40,11 +42,13 @@ const Components = () => {
                     <Sidebar/>
                     <div className={styles.componentsInner}>
 
-                        <Route exact path={'/Components'} render={() => <div>Render Render Render Rende rRender Rende rR en de r R e nd er</div>}/>
+                        <Route exact path={'/Components'} render={() => <StartPage/>}/>
 
                         <Route exact path={'/Components/Table'} render={() => <Tables/>}/>
 
                         <Route exact path={'/Components/Button'} render={() => <Button/>}/>
+
+                        <Route exact path={'/Components/Portals'} render={() => <Portals/>}/>
                         {/*<div>*/}
                         {/*    <button onClick={openPopUp} className={styles.btn}>Open PopUp</button>*/}
                         {/*    {popUp ? <PopUp onClose={onClose}/> : null}*/}

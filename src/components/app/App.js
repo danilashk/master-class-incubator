@@ -5,7 +5,7 @@ import React from "react";
 import FlexOrGrid from "../pages/ItemPage/FlexOrGrid/FlexOrGrid";
 import HTML from "../pages/ItemPage/HTML/HTML";
 import Selectors from "../pages/ItemPage/Selectors/Selectors";
-import Portals from "../pages/ItemPage/Portals/Portals";
+import Portals from "../pages/ItemPage/Components/Section/Portals/Portals";
 import Components from "../pages/ItemPage/Components/Components";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 

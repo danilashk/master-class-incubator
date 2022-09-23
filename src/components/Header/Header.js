@@ -8,13 +8,12 @@ const Header = (props) => {
     const aboutBlock = () => {
         props.setShow(true)
     }
+    const on = props.set
     return (
         <>
-            <header className={styles.header}>
+            <header className={on ? styles.header : styles.headerOn}>
                 <nav className={styles.nav}>
-                    {btn ? <button style={{marginRight: '16px'}} onClick={aboutBlock}>О чем этот блок?</button> : null}
-
-                    <Link className={styles.link} to='/'>Main Page</Link>
+                    {btn ? <button className={styles.aboutBlockBtn} onClick={aboutBlock}>О чем этот блок?</button> : null} <Link className={styles.link} to='/'>Main Page</Link>
                 </nav>
                 {props.children}
             </header>

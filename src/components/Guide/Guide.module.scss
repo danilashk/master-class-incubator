@@ -1,3 +1,32 @@
-.wrapper {
+.guideBox {
   position: absolute;
+  bottom: 0;
+  & > div {
+    position: relative;
+  }
+}
+.wrapper {
+  background-color: #51504f;
+  padding: 10px;
+}
+.guide {
+  position: absolute;
+  & .text {
+    font-size: 14px;
+  }
+}
+
+.guideBtn {
+  padding: 4px 6px;
+  border: none;
+  background-color: #3598db;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+.newclass {
+  border: 1px solid red;
 }

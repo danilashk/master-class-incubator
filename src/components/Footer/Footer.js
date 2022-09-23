@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './Footer.module.scss'
 
-const Footer = () => {
+const Footer = (props) => {
+    const on = props.set
     return (
-        <footer className={styles.footer}>
+
+        <footer className={on ? styles.footer : styles.footerSt}>
             <details>
                 <summary>Рабочее время</summary>
                 с понедельника по пятницу, с 8:00 до 18:00

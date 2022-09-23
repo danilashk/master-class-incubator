@@ -22,10 +22,11 @@ const StartPageNotification = (props) => {
     return (
         <>
             {name ? <div className={styles.container}>
-                <div className={styles.notification}>
+                <div className={styles.startPageNotification}>
                     <div>
-                        <p>A lot of text content</p>
-                        <button onClick={submit}>Все понятно!</button>
+                        <h1>О чем эта страница?</h1>
+                        <p>Какая-то кладежь знаний "It-Incubator", которая требует большее количество текста.</p>
+                        <button className={styles.notBtn} onClick={submit}>Все понятно!</button>
                     </div>
                 </div>
             </div> : null}

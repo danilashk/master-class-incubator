@@ -293,7 +293,7 @@ const FlexOrGrid = () => {
                     </p>
                 </div>
             </div>
-            {show ? <Notification url={location.pathname} setShow={setShow}/> : null}
+            {show ? <Notification description={'На данной странице мы разберем такие особенности Гридов которые не встречаются на первой странице документации. Можно ли их сделать адаптивными как флексы, да и в чем их вообще отличие от флексов? Здесь вы найдете ответы'} url={location.pathname} setShow={setShow}/> : null}
             </div>
             </div>
         </>

@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body, #root {
+html, body, #root, .container {
   height: 100%;
 }
 .hidden {

@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import styles from "./Portals.module.scss";
-import Header from "../../../Header/Header";
+import Header from "../../../../../Header/Header";
 import ReactDOM from "react-dom";
 import {useLocation} from "react-router-dom";
-import Notification from "../../../notification/Notification";
-import UseNotificationHook from "../../../../hooks/notification.hook";
+import Notification from "../../../../../notification/Notification";
+import UseNotificationHook from "../../../../../../hooks/notification.hook";
 
-const Portals = () => {
+const PortalPage = () => {
     const {show, setShow, location} = UseNotificationHook()
     const [status, setStatus] = useState(false)
     const submit = () => {
@@ -57,4 +57,4 @@ const Note = () => {
 }
 
 
-export default Portals;
+export default PortalPage;

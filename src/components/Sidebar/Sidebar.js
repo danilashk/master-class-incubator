@@ -13,6 +13,9 @@ const Sidebar = () => {
                     <li>
                         <NavLink activeStyle={{color: 'white'}} to="/Components/Button">Button</NavLink>
                     </li>
+                    <li>
+                        <NavLink activeStyle={{color: 'white'}} to="/Components/Portals">Portals</NavLink>
+                    </li>
                 </ul>
             </div>
         </div>

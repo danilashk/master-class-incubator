@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  & > header {
+    border: none;
+  }
 }
 .main {
   padding: 12px;

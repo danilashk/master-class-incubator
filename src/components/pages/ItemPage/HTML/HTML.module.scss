@@ -1,19 +1,25 @@
 * {
   color: white;
 }
-.wrapper {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 .wrapper > header {
   position: relative;
 }
 .main {
   flex: 1 1 auto;
   padding: 12px;
+  position: relative;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
 }
+.mainSt {
+  flex: 1 1 auto;
+  padding: 12px;
+  position: relative;
+  border: 1px solid rgba(53, 152, 219, 0.65);
+  transition: 0.3s ease-in-out;
+}
+
 .imgBox {
   height: 350px;
   width: 350px;
@@ -29,6 +35,27 @@
   }
 }
 .article {
+  position: relative;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  gap: 24px;
+  & > .post, figure {
+    margin: 0 auto;
+  }
+
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.articleSet {
+  position: relative;
+  border: 1px solid rgba(53, 152, 219, 0.65);
+  transition: 0.3s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,10 +82,26 @@
 .title {
   font-size: 24px;
   margin-bottom: 18px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.titleOn {
+  border: 1px solid rgba(53, 152, 219, 0.65);
+  transition: 0.3s ease-in-out;
+  font-size: 24px;
+  margin-bottom: 18px;
 }
 .text {
   font-weight: 300;
   font-size: 16px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.textOn {
+  font-weight: 300;
+  font-size: 16px;
+  border: 1px solid rgba(53, 152, 219, 0.65);
+  transition: 0.3s ease-in-out;
 }
 .figure {
   display: flex;
@@ -66,17 +109,35 @@
   justify-content: center;
   align-items: center;
   font-weight: 300;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
 }
-.click {
-  position: absolute;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  background-color: green;
+
+.figureOn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgba(53, 152, 219, 0.65);
 }
-.error {
-  background: #443f3a;
+
+
+//NEW VERSION
+.container {
+  display: flex;
+  & .viewScreen {
+    flex-basis: 70%;
+  }
+  & .textScreen {
+    flex-basis: 30%;
+    display: flex;
+  }
 }
+
+
+
 @keyframes rotate{
 
   100%{
