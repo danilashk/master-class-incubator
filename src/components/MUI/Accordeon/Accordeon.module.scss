@@ -1,0 +1,24 @@
+.description {
+  flex: 1 1 400px;
+  min-width: 280px;
+}
+
+.result {
+  flex: 1 1 400px;
+  min-width: 280px;
+}
+
+.code {
+  flex: 1 1 100%;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+}
+.resultText {
+  font-weight: 300;
+  font-size: 18px;
+  border-bottom: 1px solid #f9f9f91a;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 6px;
+}

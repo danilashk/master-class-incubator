@@ -1,9 +1,10 @@
 import React from 'react';
+import PortalPage from "./Portals/Portals";
 
 const Portals = () => {
     return (
         <div>
-            Portals
+            <PortalPage/>
         </div>
     );
 };

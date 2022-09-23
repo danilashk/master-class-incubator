@@ -1,0 +1,25 @@
+.componentsPage {
+  display: flex;
+  padding-left: 120px;
+  @media (max-width: 767px) {
+    padding: 10px 10px;
+    flex-direction: column;
+  }
+}
+.componentsInner {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  & > header {
+    border: none;
+  }
+}
+
+
+
+
+
